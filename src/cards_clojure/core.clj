@@ -49,6 +49,10 @@
         true
         :else false))))
         
+(defn four-of-a-kind? [hand]
+  (= 1 (count (set (map :rank hand)))))
+       
+
 (defn -main []
   (time
     (let [deck (create-deck)
